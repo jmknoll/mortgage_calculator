@@ -20,13 +20,13 @@
 </head>
 
 <body>
-
+  <div class='container'>
 		<div class="col-xs-12 col-sm-6 col-md-8 panel panel-default mort-calc-section">
-			<p class="section-title">贷款计算机</p>
+			<p class="section-title">Mortgage Calculator</p>
             <form role="form" action="#" method="post" class="form-horizontal" id="mort-calc">
               <div class="form-group">
                 <div class="col-sm-2 control-label">
-                  <label for="house-price">房室价格： </label>
+                  <label for="house-price">House Price： </label>
                 </div>
                 <div class="col-sm-10">
                   <input type="text" name="house-price-mort" id="house-price-mort" class="form-control" value="$0.00">
@@ -34,18 +34,21 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-2 control-label">
-                  <label for="down-payment">首付 (%)： </label>
+                  <label for="dp-percent">Down Pmt. (%)： </label>
                 </div>
                 <div class="col-sm-4">
                   <input type="number" name="dp-percent" id="dp-percent" class="form-control" value="30">
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-2 control-label">
+                  <label for="dp-amount">Down Pmt. ($)： </label>
+                </div>
+                <div class="col-sm-4">
                   <input type="text" name"dp-amount" id="dp-amount" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-2 control-label">
-                  <label for="loan-period">贷款时间： </label>
+                  <label for="loan-period">Loan Time (Yrs): </label>
                 </div>
                 <div class="col-sm-10">
                   <input type="text" name="loan-period" id="loan-period" class="form-control" placeholder="30 Years" value="30">
@@ -53,19 +56,20 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-2 control-label">
-                  <label for="interest-rate">利率(%)： </label>
+                  <label for="interest-rate">Interest Rate (%)： </label>
                 </div>
                 <div class="col-sm-10">
                   <input type="text" name="interest-rate" id="interest-rate" class="form-control" value="4.15">
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-12">
-                <input type="button" id="mort-calc-submit" name="mort-calc-submit" value="计算机" class="btn btn-lg btn-success">
+                <div>
+                <input type="button" id="mort-calc-submit" name="mort-calc-submit" value="计算机" class="btn btn-lg btn-success col-md-offset-2 col-md-9">
               </div>
               </div>
             </form>
         </div>
+      </div>
 
 <!-- javascript -->
   <script src="js/application.js"></script>
