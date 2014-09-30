@@ -2,13 +2,12 @@ $('document').ready(function() {
 
   var $dpPercent = (+$('#dp-percent').val())/100;
   //convert down payment input to float
-  window.alert($dpPercent);
-
-  $('#house-price-mort').val($housePrice);
-  //set house price to price element on pageload
 
   $('#dp-amount').val(+($('#house-price-mort').val()) * (+$('#dp-percent').val())/100)
 
+  $('#house-price-mort').change(function() {
+    $('#dp-amount').val(+($('#house-price-mort').val()) * (+$('#dp-percent').val())/100)
+  });
 
   $('#dp-percent').change(function() {
     $('#dp-amount').val(+($('#house-price-mort').val()) * (+$('#dp-percent').val())/100)
